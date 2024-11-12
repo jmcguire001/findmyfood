@@ -48,34 +48,3 @@ body {
     font-weight: bold;
 }
 
-/*The section below is for making the colors on the card*/
-.custom-card {
-    position: relative;
-}
-
-    .custom-card .card-body {
-        position: relative;
-        padding: 0; /* Remove default padding */
-        background: linear-gradient(to bottom, #f0f0f0 70%, #ff6347 70%);
-        height: 100%;
-        color: white;
-    }
-
-        .custom-card .card-body .card-text {
-            position: absolute;
-            bottom: 30%;
-            left: 0;
-            right: 0;
-            padding: 10px;
-            background-color: #ff6347; /* bottom 30% color */
-        }
-
-        .custom-card .card-body .card-title {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 10px;
-            background-color: #f0f0f0; /* upper 70% color */
-        }
-/*End section about coloring the cards*/
