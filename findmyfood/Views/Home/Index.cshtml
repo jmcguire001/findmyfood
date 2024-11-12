@@ -1,8 +1,81 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container my-4">
+    <!-- Header bar -->
+    <div class="header-bar d-flex justify-content-between align-items-center">
+        <h1 class="m-0">FindMyFood</h1>
+        <input type="text" class="search-bar" placeholder="Search for grocers or groceries">
+        <div class="icons d-flex align-items-center">
+            <i class="fas fa-user-circle fa-2x mx-2"></i>
+            <i class="fas fa-map-marker-alt fa-2x mx-2"></i>
+            <i class="fas fa-shopping-cart fa-2x mx-2"></i>
+        </div>
+    </div>
+
+    <!-- Recently Purchased and Hot Deals (side by side) -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card-section">
+                <h2>Recently purchased</h2>
+                <div class="row row-cols-1 row-cols-md-2 g-3">
+                    <!-- Add cards similar to below -->
+                    <div class="col">
+                        <div class="card">
+                            <img src="/images/salted-peanuts.jpg" class="card-img-top" alt="Salted Peanuts">
+                            <div class="card-body">
+                                <h5 class="card-title">Salted Peanuts</h5>
+                                <p class="card-text">$0.74</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Salt Lake</p>
+                                <p><i class="fas fa-store"></i> Walmart</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more cards -->
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card-section">
+                <h2>Hot Deals</h2>
+                <div class="row row-cols-1 row-cols-md-2 g-3">
+                    <!-- Add cards similar to below -->
+                    <div class="col">
+                        <div class="card">
+                            <img src="/images/sirloin-steak.jpg" class="card-img-top" alt="Sirloin Steak">
+                            <div class="card-body">
+                                <h5 class="card-title">Sirloin Steak</h5>
+                                <p class="card-text">$5.19</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Provo</p>
+                                <p><i class="fas fa-store"></i> Days</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more cards -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- "You Might Need" Section -->
+    <div class="card-section mt-4">
+        <h2>You might need</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+            <!-- Add cards similar to below -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/red-potatoes.jpg" class="card-img-top" alt="Red Potatoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Red Potatoes</h5>
+                        <p class="card-text">$1.39</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Provo</p>
+                        <p><i class="fas fa-store"></i> Walmart</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards -->
+        </div>
+    </div>
 </div>
