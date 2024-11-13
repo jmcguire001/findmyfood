@@ -49,3 +49,92 @@ body {
     font-weight: bold;
 }
 
+/*CSS added below for item details page*/
+.item-details-page {
+    background-color: #f5d5d5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.item-details {
+    background-color: #f7e6e6;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.item-title {
+    font-weight: bold;
+}
+
+.item-main-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.item-main-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.item-info .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.item-info .currency {
+    font-size: 1.2rem;
+}
+
+.item-info .item-meta {
+    list-style-type: none;
+    padding: 0;
+}
+
+.arrival-times ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.btn.add-to-cart {
+    background-color: #f48fb1;
+    color: white;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.btn.favorite {
+    background-color: #ffffff;
+    border-color: #f48fb1;
+    color: #f48fb1;
+}
+
+.similar-items {
+    background-color: #fbe7e7;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.similar-item-card {
+    background-color: #e7d4d4;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.similar-item-image {
+    width: 100%;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.similar-item-name {
+    font-weight: bold;
+}
+
+.similar-item-price {
+    color: #d32f2f;
+}
+/*End CSS for item details page*/

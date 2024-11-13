@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "ItemDetails";
+}
+
+<div class="container-fluid item-details-page">
+    <div class="row">
+        <!-- Left Section: Main Item Details -->
+        <div class="col-md-8 item-details" style="margin-left: 20px; padding: 20px; border-radius: 10px;">
+            <h2 class="item-title">AllNatural® Blueberries</h2>
+            <div class="item-main-image-container">
+                <img src="https://via.placeholder.com/400" alt="AllNatural® Blueberries" class="item-main-image" />
+            </div>
+            <div class="item-info">
+                <p class="price"><span class="currency">$</span>2.31</p>
+                <ul class="item-meta">
+                    <li><i class="fas fa-store"></i> Smith's</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Provo</li>
+                    <li>2.8 oz</li>
+                    <li>Item No. 22403</li>
+                </ul>
+                <div class="arrival-times">
+                    <p><strong>Arrive in...</strong></p>
+                    <ul>
+                        <li>2 minutes</li>
+                        <li>15 minutes</li>
+                        <li>43 minutes</li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary add-to-cart">Add to cart</button>
+                <button class="btn btn-outline-secondary favorite">Favorite</button>
+            </div>
+        </div>
+
+        <!-- Right Section: Similar Items -->
+        <div class="col-md-3 similar-items" style="margin-left: 30px; padding: 20px; border-radius: 10px;">
+            <h3>Similar Options:</h3>
+            <div class="similar-item-card">
+                <img src="https://via.placeholder.com/100" alt="BestBrand Blueberries" class="similar-item-image" />
+                <p class="similar-item-name">BestBrand Blueberries</p>
+                <p class="similar-item-price">$2.99</p>
+                <p><i class="fas fa-map-marker-alt"></i> Orem</p>
+                <p><i class="fas fa-store"></i> Harmons</p>
+            </div>
+            <div class="similar-item-card">
+                <img src="https://via.placeholder.com/100" alt="FarmerFresh Blueberries" class="similar-item-image" />
+                <p class="similar-item-name">FarmerFresh Blueberries</p>
+                <p class="similar-item-price">$2.86</p>
+                <p><i class="fas fa-map-marker-alt"></i> Vineyard</p>
+                <p><i class="fas fa-store"></i> Walgreens</p>
+            </div>
+            <div class="similar-item-card">
+                <img src="https://via.placeholder.com/100" alt="OrganicBlue Blueberries" class="similar-item-image" />
+                <p class="similar-item-name">OrganicBlue Blueberries</p>
+                <p class="similar-item-price">$3.15</p>
+                <p><i class="fas fa-map-marker-alt"></i> Springville</p>
+                <p><i class="fas fa-store"></i> Target</p>
+            </div>
+        </div>
+    </div>
+</div>
+
