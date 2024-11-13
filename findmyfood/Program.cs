@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using findmyfood.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Connection String
+string connectionString = builder.Configuration.GetConnectionString("MySQLConnection") ?? throw new InvalidOperationException("Connection String not found");
+builder.Services.AddDbContext<FindmyfoodContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 var app = builder.Build();
 
