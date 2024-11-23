@@ -1,0 +1,83 @@
+﻿@model IEnumerable<SearchResultViewModel>
+
+<h2>All Items</h2>
+
+<form asp-action="Optimize" method="get">
+    <div class="row">
+        <!-- Price Filter -->
+        <div class="col-md-3">
+            <label for="priceFilter" class="form-label">Filter by Price</label>
+            <select name="priceFilter" id="priceFilter" class="form-select">
+                <option value="">All</option>
+                <option value="low">Low to High</option>
+                <option value="high">High to Low</option>
+            </select>
+        </div>
+
+        <!-- Store Filter -->
+        <div class="col-md-3">
+            <label for="storeFilter" class="form-label">Filter by Store</label>
+            <select name="storeFilter" id="storeFilter" class="form-select">
+                <option value="">All</option>
+                @foreach (var store in ViewBag.Stores)
+                {
+                    <option value="@store.StoreId">@store.StoreName</option>
+                }
+            </select>
+        </div>
+
+        <!-- City Filter -->
+        <div class="col-md-3">
+            <label for="cityFilter" class="form-label">Filter by City</label>
+            <select name="cityFilter" id="cityFilter" class="form-select">
+                <option value="">All</option>
+                @foreach (var city in ViewBag.Cities)
+                {
+                    <option value="@city">@city</option>
+                }
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-md-3 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary">Apply Filters</button>
+        </div>
+    </div>
+</form>
+
+
+@if (!Model.Any())
+{
+    <p>No items found.</p>
+}
+else
+{
+    <div class="container mt-4">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <!-- Header with Title -->
+                        <div class="card-header bg-primary text-white text-center">
+                            <h5 class="mb-0">@item.ItemName</h5>
+                        </div>
+                        <!-- Image Section -->
+                        <div class="card-body text-center bg-light">
+                            <img src="@item.ImageUrl" alt="@item.ItemName" class="img-fluid" style="max-height: 150px; object-fit: contain;" />
+                        </div>
+                        <!-- Details Section -->
+                        <div class="card-body">
+                            <p class="bg-secondary text-white px-2 py-1 rounded"><strong>Category:</strong> @item.Category</p>
+                            <p class="bg-secondary text-white px-2 py-1 rounded"><strong>Price:</strong> $@item.Price</p>
+                            <p class="bg-secondary text-white px-2 py-1 rounded"><strong>Store:</strong> @item.StoreName</p>
+                            <p class="bg-secondary text-white px-2 py-1 rounded"><strong>City:</strong> @item.City</p>
+                            <hr style="border: 1px solid black;" />
+                            <p>@item.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SearchResultViewModel>
+
+<h2>Search Results</h2>
+
+@if (!Model.Any())
+{
+    <p>No results found for your search.</p>
+}
+else
+{
+    <div class="container mt-4">
+        <div class="row">
+            @foreach (var result in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <!-- Header with Item Name -->
+                        <div class="card-header bg-primary text-white text-center">
+                            <h5 class="mb-0">@result.ItemName</h5>
+                        </div>
+                        <!-- Image Section -->
+                        <div class="card-body text-center bg-light">
+                            <img src="@result.ImageUrl" alt="@result.ItemName" class="img-fluid" style="max-height: 150px; object-fit: contain;" />
+                        </div>
+                        <!-- Details Section -->
+                        <div class="card-body">
+                            <p class="bg-secondary text-white px-2 py-1 rounded">
+                                <strong>Category:</strong> @result.Category
+                            </p>
+                            <p class="bg-secondary text-white px-2 py-1 rounded">
+                                <strong>Price:</strong> $@result.Price
+                            </p>
+                            <p class="bg-secondary text-white px-2 py-1 rounded">
+                                <strong>Store:</strong> @result.StoreName
+                            </p>
+                            <p class="bg-secondary text-white px-2 py-1 rounded">
+                                <strong>City:</strong> @result.City
+                            </p>
+                            <hr style="border: 1px solid black;" />
+                            <p>@result.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

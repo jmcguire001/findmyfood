@@ -1,3 +1,18 @@
+.card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.card p {
+    margin-bottom: 0.5rem;
+}
+
 html {
   font-size: 14px;
 }
