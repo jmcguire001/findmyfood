@@ -1,4 +1,5 @@
 .card-header {
+    background-color: #d32f2f;
     font-size: 1.25rem;
     font-weight: bold;
 }
@@ -56,6 +57,7 @@ body {
 }
 
 .card {
+    background-color: #f8d5d5;
     border: none;
     border-radius: 10px;
 }
@@ -153,3 +155,25 @@ body {
     color: #d32f2f;
 }
 /*End CSS for item details page*/
+
+/*Button stuff*/
+.btn-custom-primary {
+    background-color: #d32f2f;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom-primary:hover {
+    background-color: #b71c1c; /* Slightly darker red for hover effect */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.btn-custom-primary:active {
+    background-color: #8c1a1a; /* Even darker red for active state */
+    transform: scale(1); /* Reset scale for active state */
+}

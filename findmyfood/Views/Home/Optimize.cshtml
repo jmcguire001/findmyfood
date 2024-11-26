@@ -40,7 +40,7 @@
 
         <!-- Submit Button -->
         <div class="col-md-3 d-flex align-items-end">
-            <button type="submit" class="btn btn-primary">Apply Filters</button>
+            <button type="submit" class="btn-custom-primary">Apply Filters</button>
         </div>
     </div>
 </form>
@@ -57,21 +57,21 @@ else
             @foreach (var item in Model)
             {
                 <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
+                    <div class="card" style="background-color: #f8d5d5">
                         <!-- Header with Title -->
-                        <div class="card-header bg-primary text-white text-center">
+                        <div class="card-header text-white text-center" style="background-color: #d32f2f">
                             <h5 class="mb-0">@item.ItemName</h5>
                         </div>
                         <!-- Image Section -->
-                        <div class="card-body text-center bg-light">
+                        <div class="card-body text-center" style="background-color: #f8d5d5">
                             <img src="@item.ImageUrl" alt="@item.ItemName" class="img-fluid" style="max-height: 150px; object-fit: contain;" />
                         </div>
                         <!-- Details Section -->
                         <div class="card-body">
-                            <p class="bg-secondary text-white px-2 py-1 rounded"><strong>Category:</strong> @item.Category</p>
-                            <p class="bg-secondary text-white px-2 py-1 rounded"><strong>Price:</strong> $@item.Price</p>
-                            <p class="bg-secondary text-white px-2 py-1 rounded"><strong>Store:</strong> @item.StoreName</p>
-                            <p class="bg-secondary text-white px-2 py-1 rounded"><strong>City:</strong> @item.City</p>
+                            <p class="bg-secondary text-white px-2 py-1 rounded"><i class="fas fa-tags"></i> @item.Category</p>
+                            <p class="bg-secondary text-white px-2 py-1 rounded"><i class="fas fa-money-bill-wave"></i> $@item.Price</p>
+                            <p class="bg-secondary text-white px-2 py-1 rounded"><i class="fas fa-store"></i> @item.StoreName</p>
+                            <p class="bg-secondary text-white px-2 py-1 rounded"><i class="fas fa-map-marker-alt"></i> @item.City</p>
                             <hr style="border: 1px solid black;" />
                             <p>@item.Description</p>
                         </div>

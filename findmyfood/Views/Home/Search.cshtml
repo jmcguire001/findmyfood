@@ -13,28 +13,28 @@ else
             @foreach (var result in Model)
             {
                 <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
+                    <div class="card" style="background-color: #f8d5d5">
                         <!-- Header with Item Name -->
-                        <div class="card-header bg-primary text-white text-center">
+                        <div class="card-header text-white text-center" style="background-color: #d32f2f">
                             <h5 class="mb-0">@result.ItemName</h5>
                         </div>
                         <!-- Image Section -->
-                        <div class="card-body text-center bg-light">
+                        <div class="card-body text-center" style="background-color: #f8d5d5">
                             <img src="@result.ImageUrl" alt="@result.ItemName" class="img-fluid" style="max-height: 150px; object-fit: contain;" />
                         </div>
                         <!-- Details Section -->
                         <div class="card-body">
                             <p class="bg-secondary text-white px-2 py-1 rounded">
-                                <strong>Category:</strong> @result.Category
+                                <i class="fas fa-tags"></i> @result.Category
                             </p>
                             <p class="bg-secondary text-white px-2 py-1 rounded">
-                                <strong>Price:</strong> $@result.Price
+                                <i class="fas fa-money-bill-wave"></i> $@result.Price
                             </p>
                             <p class="bg-secondary text-white px-2 py-1 rounded">
-                                <strong>Store:</strong> @result.StoreName
+                                <i class="fas fa-store"></i> @result.StoreName
                             </p>
                             <p class="bg-secondary text-white px-2 py-1 rounded">
-                                <strong>City:</strong> @result.City
+                                <i class="fas fa-map-marker-alt"></i> @result.City
                             </p>
                             <hr style="border: 1px solid black;" />
                             <p>@result.Description</p>
